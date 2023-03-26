@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ciągi liczbowe</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="styl2.css"/>
+    </head>
+    <body>
+        <header>
+            <div id="h1">
+                <h2>Poznaj Ciągi Liczbowe</h2>
+            </div>
+            <div id="h2">
+                <a href="liczby.html"><h5>Ciągi arytmetyczne</h5></a>
+            </div>
+            <div id="h3">
+                <a href="fib.html"><h5>Ciąg Fibonacciego</h5></a>
+            </div>
+            <div id="h4">
+                <img src="obraz1.png" alt="Fibonacci">
+            </div>
+        </header>
+        <section id="lewy">
+            <ol>
+                <li>ciągi arytmetyczne</li>
+                <li>ciągi geometryczne</li>
+                <li>ciąg Fibonacciego</li>
+            </ol>
+        </section>
+        <section id="prawy">
+            <h2>Generowanie ciągu arytmetycznego</h2>
+            <label for="inp_a1">Pierwszy wyraz A1</label>
+            <input type="number" name="inp_a1" class="inputs"/><br>
+            <label for="inp_r">Różnica ciągu R</label>
+            <input type="number" name="inp_r" class="inputs"/><br>
+            <label for="inp_n">Liczba wyrazów ciągu N</label>
+            <input type="number" name="inp_n" class="inputs"/><br>
+            <input type="button" value="Generuj ciąg" onclick="foo()"/>
+            <p id="wynik"></p>
+        </section>
+        <footer>
+            <p>Autor: dalej wstawiony numer PESEL zdającego</p>
+        </footer>
+        <script>
+            function foo(){
+                var odp = "";
+                var inputs = document.getElementsByClassName("inputs");
+                var output = document.getElementById("wynik");
+                var a1 = parseInt(inputs[0].value);
+                var r = parseInt(inputs[1].value);
+                var n = parseInt(inputs[2].value);
+                if (n > 0 && a1 >= 0 && r >= 0){
+                    odp = "Ciąg arytmetyczny zawiera wyrazy: ";
+                    odp += a1;
+                    for (; n - 1 > 0; n--){
+                        a1 += r;
+                        odp += ", " + a1;
+                    }
+                }
+                else {
+                    odp = "Podano niepoprawne dane";
+                }
+                output.innerText = odp;
+            }
+        </script>
+    </body>
+</html>

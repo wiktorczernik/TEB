@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>Aquapark</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<form>
+			<label>Ilość biletów normalnych:</label><br>
+			<input type="text" id="biletyNorm"><br>
+			<label>Ilość biletów ulgowych</label><br>
+			<input type="text" id="biletyUlg"><br>
+			<label>Ilość godzin</label><br>
+			<input type="text" id="godziny"><br>
+			<label>Karta dużej rodziny</label><br>
+			<input type="checkbox" id="karta"><br>
+			<input type="button" onclick="foo()" value="Oblicz">
+			<p id="wynik"></p>
+		</form>
+		<script type="text/javascript">
+			function foo(){
+				let normalne = parseInt(document.getElementById("biletyNorm").value);
+				let ulgowe = parseInt(document.getElementById("biletyUlg").value);
+				let godziny = parseInt(document.getElementById("godziny").value);
+				let duzaRodzina = document.getElementById("karta");
+				let cena = 0;
+				let wynik = document.getElementById("wynik");
+				if ((normalne < 0 || ulgowe < 0) || (normalne == 0 && ulgowe == 0) || godziny < 1){
+					wynik.innerText = "Źle podane dane!";
+					return;
+				}
+
+				if (godziny > 4){
+					cena += normalne * 50.0 + ulgowe * 25.0;
+				}
+				else {
+					cena += godziny * (normalne * 10.0 + ulgowe * 5.0);
+				}
+				if (karta.checked){
+					cena *= 0.9;
+				}
+				if (ulgowe > 0 && ulgowe % 15 == 0){
+					normalne += ulgowe / 15;
+				}
+				
+				wynik.innerText = "Kupiłeś " + normalne + " biletów normalnych oraz " + ulgowe + " biletów ulgowych. Całkowity koszt wstępu do aquaparku wynosi " + cena + " zł."; 
+			}
+		</script>
+	</body>
+</html>
