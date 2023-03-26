@@ -3,6 +3,5 @@
   <ItemGroup>
     <ClCompile Include="zadanie1.cpp" />
     <ClCompile Include="zadanie2.cpp" />
-    <ClCompile Include="main.cpp" />
   </ItemGroup>
 </Project>
