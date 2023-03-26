@@ -6,7 +6,7 @@
     <RootNamespace></RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>Zadanie1</StartupObject>
+    <StartupObject>Zadanie4</StartupObject>
   </PropertyGroup>
 
 </Project>
