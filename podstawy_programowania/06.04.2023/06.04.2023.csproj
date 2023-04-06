@@ -6,6 +6,7 @@
     <RootNamespace>_06._04._2023</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>Zadanie7</StartupObject>
   </PropertyGroup>
 
 </Project>
