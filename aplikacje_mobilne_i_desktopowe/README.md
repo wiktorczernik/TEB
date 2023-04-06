@@ -14,5 +14,9 @@
     <tr>
         <td> 10.02.2023 </td>
         <td> <a href="./10.02.2023">Praca domowa</a> </td>
+    </tr>>
+    <tr>
+        <td> 04.04.2023 </td>
+        <td> <a href="./04.04.2023">Klasa, obiekt, metoda - materiał z lekcji</a> </td>
     </tr>
 </table>
