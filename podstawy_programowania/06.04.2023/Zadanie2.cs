@@ -3,6 +3,12 @@ uint[] t = new uint[n];
 uint suma = 1;
 
 Console.WriteLine("Ciag Fibonacciego:\n");
+t[0] = 0;
+
+if (n > 1)
+{
+    t[1] = 1;
+}
 
 for (int i = 2; i < n; i++)
 {
