@@ -1,3 +1,5 @@
+const uint n = 7;
+uint[] t = new uint[n];
 uint max = 0;
 int maxI = 0;
 
