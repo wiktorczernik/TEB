@@ -3,7 +3,7 @@ int[] y = new int[m];
 
 Console.WriteLine("Tablica Indexowana:\n");
 
-y[0] = 0
+y[0] = 0;
 
 for (int i = 1; i < m; i++)
 {
