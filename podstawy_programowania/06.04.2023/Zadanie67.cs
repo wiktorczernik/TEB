@@ -1,14 +1,17 @@
-const uint n = 7;
-uint[] t = new uint[n];
-uint max = 0;
-int maxI = 0;
+const int n = 7;
+uint[] t = new int[n];
+float max = 0;
+float maxI = 0;
 
 Console.WriteLine("Tablica:\n");
 Console.WriteLine("Podaj elementy tablicy:");
 
-for (int i = 0; i < n; i++)
+t[0] = Convert.ToFloat(Console.ReadLine());
+t[0] = max;
+
+for (int i = 1; i < n; i++)
 {
-    t[i] = Convert.ToUInt32(Console.ReadLine());
+    t[i] = Convert.ToFloat(Console.ReadLine());
     if (t[i] > max)
     {
         max = t[i];
