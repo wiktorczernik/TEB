@@ -89,6 +89,7 @@ while (true)
     Console.WriteLine("Twoje imię i nazwisko posiadają łącznie: {0}", l);
 
     // Podpunkt 3.
+    Console.WriteLine(s);
     s = "";
 
     // Podpunkt 4.
